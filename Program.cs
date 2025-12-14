@@ -11,7 +11,6 @@ namespace MiniCrawler
          
          MiniCrawler();
 
-         //UsingWebClientClass();
 
          Console.ReadKey();
       }
