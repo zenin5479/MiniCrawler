@@ -1,1 +1,1 @@
-# MiniCrawler
+# MiniCrawler - скелетный вариант поискового робота
