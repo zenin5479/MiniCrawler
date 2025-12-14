@@ -10,20 +10,20 @@ namespace MiniCrawler
    {
       static void Main()
       {
-         string[] arg = { "https://www.mheducation.com" };
+         string[] reference = { "https://www.mheducation.com" };
          string link;
          string line;
          string answer;
          // Содержит текущее положение в ответе
          int curloc;
-         if (arg.Length != 1)
+         if (reference.Length != 1)
          {
-            Console.WriteLine("MiniCrawler: {0}", arg[0]);
+            Console.WriteLine("MiniCrawler: {0}", reference[0]);
             return;
          }
 
          // Содержит текущий URI
-         string uri = arg[0];
+         string uri = reference[0];
          HttpWebResponse response = null;
          try
          {
