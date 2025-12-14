@@ -12,7 +12,7 @@ namespace MiniCrawler
       {
          string[] arg = { "https://www.mheducation.com" };
          string link;
-         string str;
+         string line;
          string answer;
          // Содержит текущее положение в ответе
          int curloc;
@@ -41,12 +41,12 @@ namespace MiniCrawler
                // Заключить поток ввода в оболочку класса StreamReader
                StreamReader rdr = new StreamReader(istrm);
                // Прочитать всю страницу
-               str = rdr.ReadToEnd();
+               line = rdr.ReadToEnd();
                curloc = 0;
                do
                {
                   // Найти следующий URI для перехода по ссылке
-                  link = FindLink(str, ref curloc);
+                  link = FindLink(line, ref curloc);
                   if (link != null)
                   {
                      Console.WriteLine("Найдена ссылка: " + link);
