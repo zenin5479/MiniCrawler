@@ -31,11 +31,11 @@ namespace MiniCrawler
             {
                Console.WriteLine("Переход по ссылке " + uri);
                // Создать объект запроса типа WebRequest по указанному URI
-               HttpWebRequest req = (HttpWebRequest)WebRequest.Create(uri);
+               HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);
                // Запретить дальнейшее использование этого URI
                uri = null;
                // Отправить сформированный запрос и получить на него ответ
-               response = (HttpWebResponse)req.GetResponse();
+               response = (HttpWebResponse)request.GetResponse();
                // Получить поток ввода из принятого ответа
                Stream istrm = response.GetResponseStream();
                // Заключить поток ввода в оболочку класса StreamReader
