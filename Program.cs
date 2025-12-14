@@ -24,7 +24,7 @@ namespace MiniCrawler
 
          // Содержит текущий URI
          string uri = arg[0];
-         HttpWebResponse resp = null;
+         HttpWebResponse response = null;
          try
          {
             do
@@ -35,9 +35,9 @@ namespace MiniCrawler
                // Запретить дальнейшее использование этого URI
                uri = null;
                // Отправить сформированный запрос и получить на него ответ
-               resp = (HttpWebResponse)req.GetResponse();
+               response = (HttpWebResponse)req.GetResponse();
                // Получить поток ввода из принятого ответа
-               Stream istrm = resp.GetResponseStream();
+               Stream istrm = response.GetResponseStream();
                // Заключить поток ввода в оболочку класса StreamReader
                StreamReader rdr = new StreamReader(istrm);
                // Прочитать всю страницу
@@ -73,9 +73,9 @@ namespace MiniCrawler
                   }
                } while (link.Length > 0);
                // Закрыть ответный поток
-               if (resp != null)
+               if (response != null)
                {
-                  resp.Close();
+                  response.Close();
                }
             } while (uri != null);
          }
@@ -101,9 +101,9 @@ namespace MiniCrawler
          }
          finally
          {
-            if (resp != null)
+            if (response != null)
             {
-               resp.Close();
+               response.Close();
             }
          }
 
