@@ -23,17 +23,17 @@ namespace MiniCrawler
          }
 
          // Содержит текущий URI
-         string uristr = arg[0];
+         string uri = arg[0];
          HttpWebResponse resp = null;
          try
          {
             do
             {
-               Console.WriteLine("Переход по ссылке " + uristr);
+               Console.WriteLine("Переход по ссылке " + uri);
                // Создать объект запроса типа WebRequest по указанному URI
-               HttpWebRequest req = (HttpWebRequest)WebRequest.Create(uristr);
+               HttpWebRequest req = (HttpWebRequest)WebRequest.Create(uri);
                // Запретить дальнейшее использование этого URI
-               uristr = null;
+               uri = null;
                // Отправить сформированный запрос и получить на него ответ
                resp = (HttpWebResponse)req.GetResponse();
                // Получить поток ввода из принятого ответа
@@ -54,7 +54,7 @@ namespace MiniCrawler
                      answer = Console.ReadLine();
                      if (string.Equals(answer, "П", StringComparison.OrdinalIgnoreCase))
                      {
-                        uristr = string.Copy(link);
+                        uri = string.Copy(link);
                         break;
                      }
                      if (string.Equals(answer, "B", StringComparison.OrdinalIgnoreCase))
@@ -77,7 +77,7 @@ namespace MiniCrawler
                {
                   resp.Close();
                }
-            } while (uristr != null);
+            } while (uri != null);
          }
          catch (WebException exc)
          {
