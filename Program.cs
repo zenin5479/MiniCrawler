@@ -113,17 +113,17 @@ namespace MiniCrawler
       }
 
       // Найти ссылку в строке содержимого
-      static string FindLink(string htmlstr, ref int startloc)
+      static string FindLink(string htmlline, ref int startloc)
       {
          int i;
          int start, end;
          string uri = null;
-         i = htmlstr.IndexOf("href=\"http", startloc, StringComparison.OrdinalIgnoreCase);
+         i = htmlline.IndexOf("href=\"http", startloc, StringComparison.OrdinalIgnoreCase);
          if (i != -1)
          {
-            start = htmlstr.IndexOf('"', i) + 1;
-            end = htmlstr.IndexOf('"', start);
-            uri = htmlstr.Substring(start, end - start);
+            start = htmlline.IndexOf('"', i) + 1;
+            end = htmlline.IndexOf('"', start);
+            uri = htmlline.Substring(start, end - start);
             startloc = end;
          }
 
