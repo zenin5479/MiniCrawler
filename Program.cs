@@ -8,16 +8,6 @@ namespace MiniCrawler
    {
       static void Main()
       {
-         
-         MiniCrawler();
-
-
-         Console.ReadKey();
-      }
-
-      // MiniCrawler - скелетный вариант поискового робота
-      static void MiniCrawler()
-      {
          string[] arg = { "https://www.mheducation.com" };
          string link;
          string str;
@@ -116,6 +106,14 @@ namespace MiniCrawler
          }
 
          Console.WriteLine("Завершение программы MiniCrawler");
+
+         Console.ReadKey();
+      }
+
+      // MiniCrawler - скелетный вариант поискового робота
+      static void MiniCrawler()
+      {
+
       }
 
       // Найти ссылку в строке содержимого
