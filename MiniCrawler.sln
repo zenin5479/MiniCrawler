@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCrawler", "MiniCrawler.csproj", "{B6D6CBAE-3EC1-489C-97DC-873069178546}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6D6CBAE-3EC1-489C-97DC-873069178546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6D6CBAE-3EC1-489C-97DC-873069178546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6D6CBAE-3EC1-489C-97DC-873069178546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6D6CBAE-3EC1-489C-97DC-873069178546}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACACE5BB-EC5F-456F-AEDA-22E71241DD5C}
+	EndGlobalSection
+EndGlobal
